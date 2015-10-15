@@ -37,18 +37,18 @@ module.exports = generators.Base.extend({
 		fs.writeFile(destBowerJsonPath, JSON.stringify(templateBowerConfig, null, 2));	
 	},
 	copySources : function() {
-		this.fs.copyTpl(
-			this.templatePath("*.html"),
-			this.destinationPath("")
-		);
-		this.fs.copyTpl(
-			this.templatePath(".gitignore"),
-			this.destinationPath(".gitignore")
-		);
-		this.fs.copyTpl(
-			this.templatePath("tsd.json"),
-			this.destinationPath("tsd.json")
-		);
+		var toBeCopied = ["index.html", "test.html",
+			".gitignore",
+			"tsd.json",
+			"gulpfile.js",
+			".bowerrc",
+			"gulpfile.js",
+			"js",
+			"src"
+		];
+		for (var i in toBeCopied) {
+			this.fs.copyTpl(this.templatePath(toBeCopied[i]), this.destinationPath(toBeCopied[i]));
+		}
 	}
 		
 });
