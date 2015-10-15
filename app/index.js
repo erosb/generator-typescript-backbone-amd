@@ -9,6 +9,7 @@ module.exports = generators.Base.extend({
 		generators.Base.apply(this, arguments);
 	},
 	initNpmPackage: function() {
+		console.log("Initializing npm package...");
 		var initFile = path.resolve(process.env.HOME, ".npm-init");
 		init(this.destinationPath(""), initFile, {}, this._onPackageJsonCreated.bind(this));
 	},
@@ -35,6 +36,7 @@ module.exports = generators.Base.extend({
 			templateBowerConfig[key] = bowerConfigPatch[key];
 		}
 		fs.writeFile(destBowerJsonPath, JSON.stringify(templateBowerConfig, null, 2));	
+		this._printNextSteps();
 	},
 	copySources : function() {
 		var toBeCopied = ["index.html", "test.html",
@@ -49,6 +51,11 @@ module.exports = generators.Base.extend({
 		for (var i in toBeCopied) {
 			this.fs.copyTpl(this.templatePath(toBeCopied[i]), this.destinationPath(toBeCopied[i]));
 		}
-	}
-		
+	},
+	_printNextSteps : function() {
+		console.log("Project skeleton generated. Now run the following commands:");
+		console.log("	npm install");
+		console.log("	bower install");
+		console.log("	tsd reinstall");
+	}	
 });
