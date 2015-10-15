@@ -1,0 +1,31 @@
+{
+  "name": "hello-typescript",
+  "version": "0.0.1",
+  "description": "my personal typescript playground",
+  "main": "index.js",
+  "devDependencies": {
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-add-src": "^0.2.0",
+    "gulp-copy": "0.0.2",
+    "gulp-file-copy": "0.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tsd": "0.0.4",
+    "gulp-tslint": "^3.3.1",
+    "gulp-typescript": "^2.9.2",
+    "vinyl-paths": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erosb/hello-typescript.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erosb/hello-typescript/issues"
+  },
+  "homepage": "https://github.com/erosb/hello-typescript"
+}
