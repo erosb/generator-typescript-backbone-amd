@@ -10,6 +10,13 @@
     "app",
     "router"
   ],
+  "bugs" : {
+	"url" : "https://github.com/erosb/generator-typescript-backbone-amd/issues"
+  },
+  "repository" : {
+	"type" : "git",
+	"url" : "https://github.com/erosb/generator-typescript-backbone-amd.git"
+  },
   "keywords": [
     "yeoman-generator",
     "typescript",
