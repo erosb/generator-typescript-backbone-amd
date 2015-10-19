@@ -41,7 +41,7 @@ gulp.task("lint", function() {
 });
 
 
-var tsProject = tsc.createProject(tscOptions);
+var tsProject = tsc.createProject("tsconfig.json");
 
 gulp.task("compile", function() {
 	var tsResult = gulp.src(tsPath)
