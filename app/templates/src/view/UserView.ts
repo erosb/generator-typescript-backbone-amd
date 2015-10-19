@@ -4,14 +4,13 @@ import Backbone = require("backbone");
 import UserModel = require("../model/UserModel");
 import Handlebars = require("handlebars");
 
-var template = require("text!../template/UserView.html");
+var template = Handlebars.compile(require("text!../template/UserView.html"));
 
 class UserView extends Backbone.View<UserModel> {
 
-    protected template: (params?: any) => string;
+    private template = template;
 
     initialize(options: any = {}) {
-        this.template = Handlebars.compile(template);
         this.listenTo(this.model, "change", this.updateFullName.bind(this));
     }
 
