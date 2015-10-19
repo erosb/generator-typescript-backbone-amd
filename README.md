@@ -80,4 +80,20 @@ for having two separate `config.js` (containing requirejs config) to be updated 
 * `tsd.json` and `typings/` are used by the `tsd` tool for tracking tsd dependencies (this is the default configuration of `tsd`).
 * `bower.json` and `bower_components/` are used by the `bower` package manager (this is the default layout for `bower` too)
 * `gulpfile.js` is the build script used by `gulp`
+* `tsconfig.json` is a configuration file for the TypeScript compiler. It is used by the gulpfile, but advanced TypeScript
+editors (like `atom-typescript`) can also parse it.
 
+
+Generating further skeletons
+----------------------------
+
+The generator can also generate both Backbone model and Backbone view skeleton files.
+
+The generator `yo typescript-backbone-amd:model` generates a model class. It asks for a model name, then it asks
+for property names and their types in a loop. This is especially useful, since the generated code will add wrapper
+TypeScript properties to the BackBone properties. Adding this boilerplate if you want to leverage the statically typed
+nature of TypeScript. Backbone's property accessors ( `get()` and `set()` methods) are untyped, therefore if you want
+typed model properties, it is a good practice to wrap them into typed properties.
+
+There is a `yo typescript-backbone-amd:view` generator too, which simply generates a skeleton for a Backbone view, and
+also optionally creates a template file.
