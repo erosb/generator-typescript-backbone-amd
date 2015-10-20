@@ -4,7 +4,7 @@ class <%= className %> extends Backbone.Model {
 
   <% for (var i in propertyList) {%>
   get <%= propertyList[i].propName %>(): <%= propertyList[i].propType %> { return this.get("<%= propertyList[i].propName %>"); }
-  set <%= propertyList[i].propName %>(<%= propertyList[i].propName %>: <%= propertyList[i].propType %>) { return this.set("<%= propertyList[i].propName %>", <%= propertyList[i].propName %>); }
+  set <%= propertyList[i].propName %>(<%= propertyList[i].propName %>: <%= propertyList[i].propType %>) { this.set("<%= propertyList[i].propName %>", <%= propertyList[i].propName %>); }
   <% } %>
 
   defaults() {
