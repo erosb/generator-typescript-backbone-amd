@@ -4,13 +4,10 @@
 import Backbone = require("backbone");
 import Handlebars = require("handlebars");
 import <%= modelClassName %> = require("<%= modelPath %>");
-<% if (templatePath) { %>
-var template = Handlebars.compile(require("<%= templatePath %>"));
-<% } %>
 
 class <%= className %> extends Backbone.View<<%= modelClassName %>> {
 <% if (templatePath) {%>
-    private template = template;
+    template = Handlebars.compile(require("<%= templatePath %>"));
 <% } %>
     events() {
         return {
@@ -19,7 +16,7 @@ class <%= className %> extends Backbone.View<<%= modelClassName %>> {
     }
 
     initialize(options: any = {}) {
-        this.listenTo(this.model, "change", this.updateFullName.bind(this));
+        this.listenTo(this.model, "change", this.render);
     }
     
     render() {

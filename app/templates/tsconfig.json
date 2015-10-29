@@ -10,7 +10,7 @@
     },
     "filesGlob": [
         "src/**/*.ts",
-        "typings/tsd.d.ts"
+        "typings/vendor/tsd.d.ts"
     ],
     "files": [
         "src/app.ts",
@@ -18,7 +18,7 @@
         "src/tests/model/UserModelTest.ts",
         "src/tests/view/UserViewTest.ts",
         "src/view/UserView.ts",
-        "typings/tsd.d.ts"
+        "typings/vendor/tsd.d.ts"
     ],
     "exclude": []
 }
