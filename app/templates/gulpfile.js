@@ -21,7 +21,7 @@ gulp.task("copy-templates", function() {
 		
 });
 
-var tsPath = ["src/**/*.ts", "typings/tsd.d.ts"];
+var tsPath = require("./tsconfig.json").filesGlob;
 
 var tscOptions = {
 	module: "amd",
@@ -41,7 +41,7 @@ gulp.task("lint", function() {
 });
 
 
-var tsProject = tsc.createProject(tscOptions);
+var tsProject = tsc.createProject("tsconfig.json");
 
 gulp.task("compile", function() {
 	var tsResult = gulp.src(tsPath)

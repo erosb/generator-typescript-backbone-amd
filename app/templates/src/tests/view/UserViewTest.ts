@@ -1,5 +1,5 @@
-import UserView = require("../../view/UserView");
-import UserModel = require("../../model/UserModel");
+import UserView = require("../../main/view/UserView");
+import UserModel = require("../../main/model/UserModel");
 
 describe("UserViewTest", function() {
 

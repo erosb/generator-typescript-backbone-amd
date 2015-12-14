@@ -2,8 +2,8 @@
   "version": "v4",
   "repo": "borisyankov/DefinitelyTyped",
   "ref": "master",
-  "path": "typings",
-  "bundle": "typings/tsd.d.ts",
+  "path": "typings/vendor",
+  "bundle": "typings/vendor/tsd.d.ts",
   "installed": {
     "backbone/backbone.d.ts": {
       "commit": "7a3ca1f0b8a0960af9fc1838f3234cc9d6ce0645"
@@ -19,6 +19,9 @@
     },
     "handlebars/handlebars.d.ts": {
       "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "requirejs/require.d.ts": {
+      "commit": "af5b8275d1f2b92738b93fddabc461fc20c553a1"
     }
   }
 }

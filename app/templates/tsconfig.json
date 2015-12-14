@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "amd",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "noLib": false,
+        "outDir": "js"
+    },
+    "filesGlob": [
+        "src/**/*.ts",
+        "typings/vendor/tsd.d.ts"
+    ],
+    "files": [
+        "src/app.ts",
+        "src/model/UserModel.ts",
+        "src/tests/model/UserModelTest.ts",
+        "src/tests/view/UserViewTest.ts",
+        "src/view/UserView.ts",
+        "typings/vendor/tsd.d.ts"
+    ],
+    "exclude": []
+}

@@ -64,6 +64,7 @@ module.exports = generators.Base.extend({
       "gulpfile.js",
       ".bowerrc",
       "gulpfile.js",
+      "tsconfig.json",
       "js"
     ];
     for (var i in toBeCopied) {

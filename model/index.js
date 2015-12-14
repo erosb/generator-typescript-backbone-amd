@@ -9,6 +9,7 @@ module.exports = generators.Base.extend({
     generators.Base.apply(this, arguments);
   },
   readClassName : function() {
+	  var onComplete = this.async();
       templateParams = {
         properties : []
       };
@@ -25,6 +26,8 @@ module.exports = generators.Base.extend({
             this.destinationPath("src/model/" + answer.className + ".ts"),
             templateParams
           );
+          this.modelClassName = answer.className;
+          onComplete();
         }.bind(this));
       }.bind(this));
   },
@@ -59,5 +62,26 @@ module.exports = generators.Base.extend({
        onComplete(this.propertyList || []);
      }
    }.bind(this));
+  },
+  copyTest : function() {
+	  this.prompt({
+		 type : "confirm",
+		 name : "generateTest",
+		 message : "Do you want to generate a jasmine test?" 
+      }, function(answer) {
+		if (answer.generateTest) {
+			var testClassName = this.modelClassName + "Test";
+			var testFileName = testClassName + ".ts" ;
+			var templateParams = {
+				sutClassName : this.modelClassName,
+				testClassName : testClassName
+			}
+			this.fs.copyTpl(
+				this.templatePath("test.ts"),
+				this.destinationPath("src/tests/model/" + testFileName),
+				templateParams
+			);
+		}  
+	  }.bind(this));
   }
 });
