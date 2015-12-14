@@ -13,7 +13,8 @@
     "gulp-tsd": "0.0.4",
     "gulp-tslint": "^3.3.1",
     "gulp-typescript": "^2.9.2",
-    "vinyl-paths": "^2.0.0"
+    "vinyl-paths": "^2.0.0",
+    "bower-requirejs": "^1.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
