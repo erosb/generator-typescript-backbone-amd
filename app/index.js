@@ -59,7 +59,6 @@ module.exports = generators.Base.extend({
     var toBeCopied = [
       "index.html",
       "test.html",
-      ".gitignore",
       "tsd.json",
       "gulpfile.js",
       ".bowerrc",
@@ -70,6 +69,7 @@ module.exports = generators.Base.extend({
     for (var i in toBeCopied) {
       this.fs.copyTpl(this.templatePath(toBeCopied[i]), this.destinationPath(toBeCopied[i]));
     }
+    this.fs.copyTpl(this.templatePath("gitignore"), this.destinationPath(".gitignore"));
   },
   copySampleSources: function() {
     var onComplete = this.async();
