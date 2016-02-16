@@ -1,6 +1,6 @@
 {
   "name": "generator-typescript-backbone-amd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Yeoman generator for client-side apps using TypeScript, Backbone, AMD (requirejs), Handlebars, Jasmine, Gulp and Bower",
   "main": "index.js",
   "scripts": {
