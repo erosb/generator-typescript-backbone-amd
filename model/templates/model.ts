@@ -1,6 +1,6 @@
 import Backbone = require("backbone");
 
-class <%= className %> extends Backbone.Model {
+export default class <%= className %> extends Backbone.Model {
 
   <% for (var i in propertyList) {%>
   get <%= propertyList[i].propName %>(): <%= propertyList[i].propType %> { return this.get("<%= propertyList[i].propName %>"); }
@@ -18,5 +18,3 @@ class <%= className %> extends Backbone.Model {
   }
 
 }
-
-export = <%= className %>;

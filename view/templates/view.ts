@@ -3,9 +3,9 @@
 <% } %>
 import Backbone = require("backbone");
 import Handlebars = require("handlebars");
-import <%= modelClassName %> = require("<%= modelPath %>");
+import <%= modelClassName %> from "<%= modelPath %>";
 
-class <%= className %> extends Backbone.View<<%= modelClassName %>> {
+export default class <%= className %> extends Backbone.View<<%= modelClassName %>> {
 <% if (templatePath) {%>
     template = Handlebars.compile(require("<%= templatePath %>"));
 <% } %>
@@ -24,5 +24,3 @@ class <%= className %> extends Backbone.View<<%= modelClassName %>> {
         return this;
     }
 }
-
-export = <%= className %>;

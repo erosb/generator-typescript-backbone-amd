@@ -1,12 +1,13 @@
 /// <amd-dependency path="text!../template/UserView.html" />
 
 import Backbone = require("backbone");
-import UserModel = require("../model/UserModel");
 import Handlebars = require("handlebars");
+
+import UserModel from "../model/UserModel";
 
 var template = Handlebars.compile(require("text!../template/UserView.html"));
 
-class UserView extends Backbone.View<UserModel> {
+export default class UserView extends Backbone.View<UserModel> {
 
     private template = template;
 
@@ -36,5 +37,3 @@ class UserView extends Backbone.View<UserModel> {
         return this;
     }
 }
-
-export = UserView;

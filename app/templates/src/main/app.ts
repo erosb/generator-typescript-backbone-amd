@@ -1,9 +1,7 @@
 import $ = require("jquery");
-import UserView = require("./view/UserView");
-import UserModel = require("./model/UserModel");
+import UserView from "./view/UserView";
+import UserModel from "./model/UserModel";
 
-function app() {
+export default function app() {
 	$("body").append(new UserView({model : new UserModel()}).render().$el);
 }
-
-export = app;

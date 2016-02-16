@@ -1,4 +1,4 @@
-import <%= sutClassName %> = require("../../model/<%= sutClassName %>");
+import <%= sutClassName %> from "../../model/<%= sutClassName %>";
 
 describe("<%= sutClassName %> Test", function() {
 

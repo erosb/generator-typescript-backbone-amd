@@ -1,4 +1,4 @@
-import UserModel = require("../../main/model/UserModel");
+import UserModel from "../../main/model/UserModel";
 
 describe("UserModel", function() {
 

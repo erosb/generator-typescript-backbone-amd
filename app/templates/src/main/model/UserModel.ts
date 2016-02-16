@@ -1,7 +1,7 @@
 import Backbone = require("backbone");
 
 
-class UserModel extends Backbone.Model {
+export default class UserModel extends Backbone.Model {
 
 	get firstName() : string { return this.get("firstName"); }
 	set firstName(firstName: string) { this.set("firstName", firstName); }
@@ -25,5 +25,3 @@ class UserModel extends Backbone.Model {
 	}
 	
 }
-
-export = UserModel;
