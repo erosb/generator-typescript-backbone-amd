@@ -3,6 +3,10 @@ var init = require("init-package-json");
 var path = require("path");
 var fs = require("fs");
 
+function homeDir() {
+  return process.env.HOME || process.env.USERPROFILE ;
+}
+
 module.exports = generators.Base.extend({
 
   constructor: function() {
@@ -24,7 +28,7 @@ module.exports = generators.Base.extend({
       });
     } else {
       console.log("Initializing npm package...");
-      var initFile = path.resolve(process.env.HOME, ".npm-init");
+      var initFile = path.resolve(homeDir(), ".npm-init");
       init(this.destinationPath(""), initFile, {}, function(err, data) {
         this._onPackageJsonCreated(err, data, onComplete);
       }.bind(this));
