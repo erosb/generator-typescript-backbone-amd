@@ -22,6 +22,7 @@ Prerequisites
 	npm install -g gulp
 	npm install -g tsd
 	npm install -g typescript
+    npm install -g karma
 	
 Installation
 ------------
@@ -47,6 +48,10 @@ you can run it with the `static -c 1 .` . If the server is up and running then p
 see the running application, and you can run the tests at `http://localhost:8080/test.html` . Changing any source files, test files
 or template fragments under the `src` directory will be catched, compiled/copied by `gulp`, therefore all you need to do is refreshing
 the browser after changing your file.
+
+You can also run the tests from the command line using the `karma start` and `karma run` commands. By default the tests are 
+executed whenever a `.js` file changes (`autoWatch` is set to `true` in `karma.conf.js`), so it is enough to invoke `karma start`,
+when you start working. But you can turn off the automatic execution, and run the tests manually using `karma run`.
 
 Whats inside?
 -------------
